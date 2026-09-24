@@ -18,6 +18,15 @@ Google Colab で開いて、上から順に実行できる小さな道具をま�
 | [音声文字起こし](notebooks/gpu_whisper_transcribe.ipynb) · [Colab で開く](https://colab.research.google.com/github/sakusdev/convenient-colabnotebooks/blob/main/notebooks/gpu_whisper_transcribe.ipynb) | [Whisper small](https://huggingface.co/openai/whisper-small) | 音声から TXT と SRT 字幕を作成 |
 | [画像生成](notebooks/gpu_sdxl_turbo_image.ipynb) · [Colab で開く](https://colab.research.google.com/github/sakusdev/convenient-colabnotebooks/blob/main/notebooks/gpu_sdxl_turbo_image.ipynb) | [SDXL Turbo](https://huggingface.co/stabilityai/sdxl-turbo) | プロンプトから 512×512 の PNG を生成 |
 
+## 特殊用途
+
+| ノートブック | できること | 補足 |
+| --- | --- | --- |
+| [MuScripter向け非ドラム採譜](notebooks/muscripter_non_drum_midi.ipynb) · [Colab で開く](https://colab.research.google.com/github/sakusdev/convenient-colabnotebooks/blob/main/notebooks/muscripter_non_drum_midi.ipynb) | 音声 → 非ドラム楽器のみの `music.mid` | 別プロジェクトの[MuScriptor](https://github.com/muscriptor/muscriptor)を推論に使用。ユーザー独自の MuScripter モデルではありません。モデル利用条件の承認と Hugging Face トークンが必要。GPU推奨。 |
+| [非ドラム＋ドラムMIDI結合](notebooks/merge_music_and_drums_midi.ipynb) · [Colab で開く](https://colab.research.google.com/github/sakusdev/convenient-colabnotebooks/blob/main/notebooks/merge_music_and_drums_midi.ipynb) | `music.mid` ＋ `drums.mid` → `complete.mid` | ドラム専用採譜の結果を後から統合。入力ファイルは変更しません。 |
+| [GPUステム分離](notebooks/gpu_demucs_stems.ipynb) · [Colab で開く](https://colab.research.google.com/github/sakusdev/convenient-colabnotebooks/blob/main/notebooks/gpu_demucs_stems.ipynb) | 楽曲 → drums / bass / other / vocals の4本のWAV | [Demucs の推論用パッケージ](https://github.com/openmirlab/demucs-infer)を使用。 |
+| [動画シーン一覧](notebooks/video_scene_contact_sheet.ipynb) · [Colab で開く](https://colab.research.google.com/github/sakusdev/convenient-colabnotebooks/blob/main/notebooks/video_scene_contact_sheet.ipynb) | 動画 → シーン変化の一覧画像と個別フレーム | CPUで実行可能。 |
+
 ## 使い方
 
 1. 表の「Colab で開く」を押します。Google アカウントでログインが必要です。

@@ -8,6 +8,16 @@ Google Colab で開いて、上から順に実行できる小さな道具をま�
 | [CSV / Excel の確認と整理](notebooks/csv_excel_inspector_cleaner.ipynb) · [Colab で開く](https://colab.research.google.com/github/sakusdev/convenient-colabnotebooks/blob/main/notebooks/csv_excel_inspector_cleaner.ipynb) | 列型、欠損、重複を確認し、選んだ処理だけ適用 | CSV / XLSX → 別名の CSV |
 | [画像を一括リサイズ・形式変換](notebooks/画像を一括リサイズ・形式変換.ipynb) · [Colab で開く](https://colab.research.google.com/github/sakusdev/convenient-colabnotebooks/blob/main/notebooks/%E7%94%BB%E5%83%8F%E3%82%92%E4%B8%80%E6%8B%AC%E3%83%AA%E3%82%B5%E3%82%A4%E3%82%BA%E3%83%BB%E5%BD%A2%E5%BC%8F%E5%A4%89%E6%8F%9B.ipynb) | 向き補正、縮小、WebP / JPEG / PNG への一括変換 | 画像 → 変換画像をまとめた ZIP |
 
+## GPU 推論
+
+これらは Colab の **ランタイム → ランタイムのタイプを変更 → GPU** を選んでから実行してください。モデルの初回ダウンロードには時間と空き容量が必要です。別の GPU モデルを同じセッションで動かしている場合、VRAM 不足を避けるためランタイムを再起動してください。モデルごとの利用条件はリンク先のモデルカードを確認してください。
+
+| ノートブック | モデル | できること |
+| --- | --- | --- |
+| [日本語チャット](notebooks/gpu_qwen3_chat.ipynb) · [Colab で開く](https://colab.research.google.com/github/sakusdev/convenient-colabnotebooks/blob/main/notebooks/gpu_qwen3_chat.ipynb) | [Qwen3-1.7B](https://huggingface.co/Qwen/Qwen3-1.7B) | GPU 上で短い質問と回答を生成 |
+| [音声文字起こし](notebooks/gpu_whisper_transcribe.ipynb) · [Colab で開く](https://colab.research.google.com/github/sakusdev/convenient-colabnotebooks/blob/main/notebooks/gpu_whisper_transcribe.ipynb) | [Whisper small](https://huggingface.co/openai/whisper-small) | 音声から TXT と SRT 字幕を作成 |
+| [画像生成](notebooks/gpu_sdxl_turbo_image.ipynb) · [Colab で開く](https://colab.research.google.com/github/sakusdev/convenient-colabnotebooks/blob/main/notebooks/gpu_sdxl_turbo_image.ipynb) | [SDXL Turbo](https://huggingface.co/stabilityai/sdxl-turbo) | プロンプトから 512×512 の PNG を生成 |
+
 ## 使い方
 
 1. 表の「Colab で開く」を押します。Google アカウントでログインが必要です。
